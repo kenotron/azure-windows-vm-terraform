@@ -13,17 +13,17 @@ variable "base_domain" {
 variable "resource_group_name" {
   description = "Azure resource group name"
   type        = string
-  default     = "windows-vnc-rg"
+  default     = "AI-k8s-ken"
 }
 
 variable "location" {
   description = "Azure region"
   type        = string
-  default     = "eastus"
+  default     = "southcentralus"
 }
 
 variable "cluster_name" {
   description = "AKS cluster name"
   type        = string
-  default     = "windows-vnc-aks"
+  default     = "aks-cluster-ken"
 }
