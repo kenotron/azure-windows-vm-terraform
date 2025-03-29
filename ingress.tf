@@ -3,7 +3,7 @@ resource "kubernetes_manifest" "webvnc_ingress_route" {
   count = var.windows_vm_count
   
   manifest = {
-    apiVersion = "traefik.containo.us/v1alpha1"
+    apiVersion = "traefik.io/v1alpha1"
     kind       = "IngressRoute"
     metadata = {
       name      = "webvnc-${count.index + 1}"
@@ -32,7 +32,7 @@ resource "kubernetes_manifest" "vnc_tcp_route" {
   count = var.windows_vm_count
   
   manifest = {
-    apiVersion = "traefik.containo.us/v1alpha1"
+    apiVersion = "traefik.io/v1alpha1"
     kind       = "IngressRouteTCP"
     metadata = {
       name      = "vnc-direct-${count.index + 1}"

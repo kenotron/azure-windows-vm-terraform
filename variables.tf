@@ -10,10 +10,16 @@ variable "base_domain" {
   default     = "azure-example.com" # Update with your domain
 }
 
+variable "subscription_id" {
+  description = "Subscription ID"
+  type        = string
+  default     = "fill-this-out-in-main.tf" # Update with your domain
+}
+
 variable "resource_group_name" {
   description = "Azure resource group name"
   type        = string
-  default     = "AI-k8s-ken"
+  default     = "AI-k8s-Ken"
 }
 
 variable "location" {
@@ -25,5 +31,11 @@ variable "location" {
 variable "cluster_name" {
   description = "AKS cluster name"
   type        = string
-  default     = "aks-cluster-ken"
+  default     = "ken-k8s"
+}
+
+variable "cluster_dns_prefix" {
+  description = "AKS cluster dns prefix name"
+  type        = string
+  default     = "ken-k8s-dns"
 }

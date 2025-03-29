@@ -1,0 +1,7 @@
+windows_vm_count = 3
+base_domain = "azure-example.com" 
+resource_group_name = "AI-k8s-Ken"
+location = "southcentralus"
+cluster_name = "ken-k8s"
+cluster_dns_prefix = "ken-k8s-dns"
+subscription_id = ""

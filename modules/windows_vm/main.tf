@@ -84,7 +84,7 @@ resource "kubernetes_service" "windows_vm" {
 # IngressRoute for WebVNC access
 resource "kubernetes_manifest" "webvnc_ingress_route" {
   manifest = {
-    apiVersion = "traefik.containo.us/v1alpha1"
+    apiVersion = "traefik.io/v1alpha1"
     kind       = "IngressRoute"
     metadata = {
       name      = "webvnc-${var.vm_index}"
@@ -111,7 +111,7 @@ resource "kubernetes_manifest" "webvnc_ingress_route" {
 # TCP Route for direct VNC access
 resource "kubernetes_manifest" "vnc_tcp_route" {
   manifest = {
-    apiVersion = "traefik.containo.us/v1alpha1"
+    apiVersion = "traefik.io/v1alpha1"
     kind       = "IngressRouteTCP"
     metadata = {
       name      = "vnc-direct-${var.vm_index}"
